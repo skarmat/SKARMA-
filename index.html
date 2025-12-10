@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SKARMA | Ladakh's Cosmic Heritage</title>
+    <meta
+      name="description"
+      content="Explore the cosmic wonders of Ladakh. A digital gallery connecting ancient wisdom with modern astronomy."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Montserrat:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link href="./css/style.css" rel="stylesheet" />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body
+    class="bg-skarma-bg text-skarma-silver font-sans antialiased selection:bg-skarma-gold selection:text-skarma-dark overflow-x-hidden"
+  >
+    <!-- Ambient Background -->
+    <div class="stars"></div>
+    <div class="stars2"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <a
+          href="#"
+          class="text-2xl font-light tracking-[0.2em] text-white hover:text-skarma-gold transition-colors"
+        >
+          <span class="text-skarma-gold">
+            <i class="ph ph-star-four text-skarma-gold text-2xl"></i>
+          </span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div
+          class="hidden md:flex space-x-8 text-sm tracking-widest font-light"
+        >
+          <a
+            href="#stories"
+            class="hover:text-skarma-gold py-2 transition-colors duration-300 link-underline"
+            >STORIES</a
+          >
+          <a
+            href="#science"
+            class="hover:text-skarma-gold py-2 transition-colors duration-300 link-underline"
+            >SCIENCE</a
+          >
+          <a
+            href="#darkskies"
+            class="hover:text-skarma-gold py-2 transition-colors duration-300 link-underline"
+            >DARK SKIES</a
+          >
+          <a
+            href="#gallery"
+            class="hover:text-skarma-gold py-2 transition-colors duration-300 link-underline"
+            >GALLERY</a
+          >
+          <a
+            href="#about"
+            class="hover:text-skarma-gold py-2 transition-colors duration-300 link-underline"
+            >ABOUT</a
+          >
+          <a
+            href="#contact"
+            class="px-4 py-2 border border-skarma-gold text-skarma-gold hover:bg-skarma-gold hover:text-skarma-dark transition-all duration-300"
+            >JOIN</a
+          >
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden text-white focus:outline-none"
+        >
+          <i class="ph ph-list text-3xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Overlay -->
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 bg-skarma-dark/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center space-y-8"
+      >
+        <button
+          id="close-menu-btn"
+          class="absolute top-6 right-6 text-white text-3xl"
+        >
+          <i class="ph ph-x"></i>
+        </button>
+        <a
+          href="#stories"
+          class="text-xl tracking-widest hover:text-skarma-gold"
+          >STORIES</a
+        >
+        <a
+          href="#science"
+          class="text-xl tracking-widest hover:text-skarma-gold"
+          >SCIENCE</a
+        >
+        <a
+          href="#darkskies"
+          class="text-xl tracking-widest hover:text-skarma-gold"
+          >DARK SKIES</a
+        >
+        <a
+          href="#gallery"
+          class="text-xl tracking-widest hover:text-skarma-gold"
+          >GALLERY</a
+        >
+        <a href="#about" class="text-xl tracking-widest hover:text-skarma-gold"
+          >ABOUT</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header
+      class="relative min-h-screen w-full flex items-center justify-center overflow-hidden"
+    >
+      <!-- Background Video -->
+      <div class="absolute inset-0 z-0 w-full h-full">
+        <video
+          src="./assets/images/Milky_Way_Lake_Timelapse_Video.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          class="absolute top-0 left-0 w-[100vw] h-full object-cover opacity-60"
+        ></video>
+
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-skarma-bg/30 via-transparent to-skarma-bg"
+        ></div>
+      </div>
+
+      <!-- Content -->
+      <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <h1
+          class="text-6xl md:text-8xl font-thin tracking-[0.2em] mb-4 text-white text-glow animate-float"
+        >
+          SKARMA
+        </h1>
+
+        <div class="w-24 h-[1px] bg-skarma-gold mx-auto mb-6"></div>
+
+        <p
+          class="text-lg md:text-2xl font-serif italic text-skarma-silver/90 mb-10 tracking-wide"
+        >
+          Ladakh's Cosmic Heritage
+        </p>
+
+        <a
+          href="#about"
+          class="inline-block px-8 py-3 border border-skarma-gold/50 text-skarma-gold hover:bg-skarma-gold hover:text-skarma-dark transition-all duration-500 uppercase tracking-widest text-sm"
+        >
+          Explore the Stars
+        </a>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div
+        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-skarma-gold/50"
+      >
+        <i class="ph ph-caret-down text-2xl"></i>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 relative">
+      <div class="container mx-auto max-w-3xl text-center reveal">
+        <div class="mb-6 flex justify-center">
+          <i class="ph ph-star-four text-skarma-gold text-2xl"></i>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-light mb-8 tracking-wide">
+          A Portal to the Cosmic Wonders
+        </h2>
+        <p class="text-lg font-serif leading-relaxed text-gray-300">
+          SKARMA is your gateway to the pristine night skies of the Himalayas.
+          We bridge the gap between the ancient wisdom of Ladakhi starlore and
+          modern astronomical science. Here, under the clearest skies on Earth,
+          the universe doesn't just look back at you—it speaks.
+        </p>
+      </div>
+    </section>
+
+    <!-- Ladakhi Starlore (Stories) -->
+    <section id="stories" class="py-24 bg-skarma-dark relative overflow-hidden">
+      <!-- Decor -->
+      <div
+        class="absolute top-0 right-0 w-64 h-64 bg-skarma-gold/5 rounded-full blur-3xl"
+      ></div>
+
+      <div class="container mx-auto px-6 relative z-10">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-16 reveal"
+        >
+          <div>
+            <span
+              class="text-skarma-gold text-sm tracking-widest uppercase block mb-2"
+              >Heritage</span
+            >
+            <h2 class="text-4xl font-light text-white">Starlore & Culture</h2>
+          </div>
+          <p class="text-gray-400 max-w-md mt-4 md:mt-0 font-serif text-sm">
+            Discover the legends woven into the constellations by the people of
+            the high desert.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="group relative h-96 cursor-pointer overflow-hidden rounded-sm reveal transition-all duration-500 hover:-translate-y-2"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?auto=format&fit=crop&q=80&w=600"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-40"
+              alt="Stars"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-skarma-dark via-skarma-dark/50 to-transparent"
+            ></div>
+            <div
+              class="absolute bottom-0 p-8 border-t border-skarma-gold/30 w-full"
+            >
+              <div class="flex items-center gap-3 mb-2">
+                <i class="ph ph-sparkle text-skarma-gold"></i>
+                <span class="text-xs uppercase tracking-widest text-skarma-gold"
+                  >Mythology</span
+                >
+              </div>
+              <h3
+                class="text-2xl font-serif text-white mb-2 group-hover:text-skarma-gold transition-colors"
+              >
+                The King's Horse Path
+              </h3>
+              <p
+                class="text-sm text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0"
+              >
+                The Milky Way is seen as a celestial path guided by ancient
+                spirits...
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="group relative h-96 cursor-pointer overflow-hidden rounded-sm reveal transition-all duration-500 hover:-translate-y-2 delay-100"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1534234828569-16d2545d6148?auto=format&fit=crop&q=80&w=600"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-40"
+              alt="Antares"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-skarma-dark via-skarma-dark/50 to-transparent"
+            ></div>
+            <div
+              class="absolute bottom-0 p-8 border-t border-skarma-gold/30 w-full"
+            >
+              <div class="flex items-center gap-3 mb-2">
+                <i class="ph ph-star text-skarma-gold"></i>
+                <span class="text-xs uppercase tracking-widest text-skarma-gold"
+                  >Star</span
+                >
+              </div>
+              <h3
+                class="text-2xl font-serif text-white mb-2 group-hover:text-skarma-gold transition-colors"
+              >
+                Ldugu (Antares)
+              </h3>
+              <p
+                class="text-sm text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0"
+              >
+                Known as the scorpion's heart, holding significance in
+                agricultural timing.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="group relative h-96 cursor-pointer overflow-hidden rounded-sm reveal transition-all duration-500 hover:-translate-y-2 delay-200"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&q=80&w=600"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-40"
+              alt="Monastery"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-skarma-dark via-skarma-dark/50 to-transparent"
+            ></div>
+            <div
+              class="absolute bottom-0 p-8 border-t border-skarma-gold/30 w-full"
+            >
+              <div class="flex items-center gap-3 mb-2">
+                <i class="ph ph-moon text-skarma-gold"></i>
+                <span class="text-xs uppercase tracking-widest text-skarma-gold"
+                  >History</span
+                >
+              </div>
+              <h3
+                class="text-2xl font-serif text-white mb-2 group-hover:text-skarma-gold transition-colors"
+              >
+                The Monastic Calendar
+              </h3>
+              <p
+                class="text-sm text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0"
+              >
+                How the movement of celestial bodies dictates the rhythm of
+                spiritual life.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Science Section -->
+    <section id="science" class="py-24 relative">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+          <span class="text-skarma-gold text-sm tracking-widest uppercase"
+            >Astronomy</span
+          >
+          <h2 class="text-4xl font-light mt-2">Science & Universe</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal">
+          <!-- Buttons Left -->
+          <div class="space-y-4" id="science-list">
+            <button
+              onclick="updateScience('altitude')"
+              class="science-btn w-full text-left p-6 glass-panel border-l-4 border-skarma-gold hover:bg-white/5 transition-all group active"
+            >
+              <h4
+                class="text-xl font-medium text-white mb-2 group-hover:text-skarma-gold transition-colors"
+              >
+                High Altitude Advantage
+              </h4>
+              <p class="text-gray-400 font-serif text-sm">
+                The 4,500m elevation reduces atmospheric interference.
+              </p>
+            </button>
+
+            <button
+              onclick="updateScience('observatory')"
+              class="science-btn w-full text-left p-6 glass-panel border-l-4 border-transparent hover:bg-white/5 transition-all group"
+            >
+              <h4
+                class="text-xl font-medium text-white mb-2 group-hover:text-skarma-gold transition-colors"
+              >
+                Hanle Observatory
+              </h4>
+              <p class="text-gray-400 font-serif text-sm">
+                Home to one of the world's highest optical telescopes.
+              </p>
+            </button>
+
+            <button
+              onclick="updateScience('bortle')"
+              class="science-btn w-full text-left p-6 glass-panel border-l-4 border-transparent hover:bg-white/5 transition-all group"
+            >
+              <h4
+                class="text-xl font-medium text-white mb-2 group-hover:text-skarma-gold transition-colors"
+              >
+                Bortle Scale: Class 1
+              </h4>
+              <p class="text-gray-400 font-serif text-sm">
+                The measurement of true darkness and sky quality.
+              </p>
+            </button>
+          </div>
+
+          <!-- Visual Right (Dynamic) -->
+          <div
+            id="science-visual"
+            class="relative h-[500px] w-full bg-skarma-card rounded-full overflow-hidden flex items-center justify-center border border-white/10 transition-all duration-500"
+          >
+            <!-- Abstract Planet/Orbit visualization - background image updates dynamically -->
+            <div
+              id="s-bg"
+              class="absolute w-[120%] h-[120%] bg-[url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1000&auto=format&fit=crop')] bg-cover opacity-30 animate-spin-slow"
+              style="animation-duration: 60s"
+            ></div>
+
+            <!-- Static rings -->
+            <div
+              class="absolute w-64 h-64 border border-skarma-gold/20 rounded-full animate-ping"
+              style="animation-duration: 3s"
+            ></div>
+            <div
+              class="absolute w-48 h-48 border border-white/10 rounded-full"
+            ></div>
+
+            <!-- Text content updates dynamically -->
+            <div
+              class="z-10 text-center transition-all duration-300"
+              id="s-content-wrapper"
+            >
+              <h3 id="s-title" class="text-5xl font-thin text-white">
+                4500<span class="text-lg align-top">m</span>
+              </h3>
+              <p
+                id="s-subtitle"
+                class="text-skarma-gold tracking-widest text-xs uppercase mt-2"
+              >
+                Elevation
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dark Sky Villages & Data (Interactive) -->
+    <section
+      id="darkskies"
+      class="py-24 bg-skarma-dark border-y border-white/5"
+    >
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row gap-12 reveal">
+          <!-- Left: List/Map Placeholder -->
+          <div class="md:w-1/3">
+            <span
+              class="text-skarma-gold text-sm tracking-widest uppercase block mb-4"
+              >Dark Sky Reserve</span
+            >
+            <h2 class="text-3xl font-light mb-8">Sanctuaries of Darkness</h2>
+
+            <div class="space-y-2" id="village-list">
+              <button
+                onclick="updateVillage('hanle')"
+                class="village-btn w-full text-left p-4 glass-panel hover:bg-white/5 transition-all flex justify-between items-center group border-l-4 border-skarma-gold active"
+              >
+                <span class="font-medium group-hover:text-skarma-gold"
+                  >Hanle</span
+                >
+                <i
+                  class="ph ph-arrow-right opacity-0 group-hover:opacity-100 transition-opacity text-skarma-gold"
+                ></i>
+              </button>
+              <button
+                onclick="updateVillage('merak')"
+                class="village-btn w-full text-left p-4 glass-panel hover:bg-white/5 transition-all flex justify-between items-center group border-l-4 border-transparent"
+              >
+                <span class="font-medium group-hover:text-skarma-gold"
+                  >Merak</span
+                >
+                <i
+                  class="ph ph-arrow-right opacity-0 group-hover:opacity-100 transition-opacity text-skarma-gold"
+                ></i>
+              </button>
+              <button
+                onclick="updateVillage('maan')"
+                class="village-btn w-full text-left p-4 glass-panel hover:bg-white/5 transition-all flex justify-between items-center group border-l-4 border-transparent"
+              >
+                <span class="font-medium group-hover:text-skarma-gold"
+                  >Maan</span
+                >
+                <i
+                  class="ph ph-arrow-right opacity-0 group-hover:opacity-100 transition-opacity text-skarma-gold"
+                ></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Content Display -->
+          <div class="md:w-2/3">
+            <div
+              id="village-content"
+              class="h-full glass-panel p-8 rounded relative overflow-hidden transition-all duration-500"
+            >
+              <!-- Content injected via JS -->
+              <div class="absolute top-0 right-0 p-6 opacity-20">
+                <i class="ph ph-telescope text-9xl"></i>
+              </div>
+
+              <div class="relative z-10">
+                <div class="flex justify-between items-end mb-6">
+                  <h3 id="v-name" class="text-4xl font-serif text-white">
+                    Hanle
+                  </h3>
+                  <span
+                    class="bg-skarma-gold/20 text-skarma-gold px-3 py-1 text-xs tracking-widest uppercase rounded"
+                    >HQ: Dark Sky Reserve</span
+                  >
+                </div>
+
+                <img
+                  id="v-image"
+                  src="https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&q=80&w=800"
+                  class="w-full h-64 object-cover rounded mb-8 grayscale hover:grayscale-0 transition-all duration-700"
+                  alt="Hanle"
+                />
+
+                <div class="grid grid-cols-2 gap-6 mb-8">
+                  <div>
+                    <p
+                      class="text-xs text-gray-500 uppercase tracking-widest mb-1"
+                    >
+                      Sky Quality (SQM)
+                    </p>
+                    <p
+                      id="v-sqm"
+                      class="text-2xl text-skarma-silver font-light"
+                    >
+                      21.89
+                      <span class="text-sm text-gray-500">mag/arcsec²</span>
+                    </p>
+                  </div>
+                  <div>
+                    <p
+                      class="text-xs text-gray-500 uppercase tracking-widest mb-1"
+                    >
+                      Bortle Scale
+                    </p>
+                    <p
+                      id="v-bortle"
+                      class="text-2xl text-skarma-silver font-light"
+                    >
+                      Class 1
+                    </p>
+                  </div>
+                </div>
+
+                <p id="v-desc" class="text-gray-400 font-serif leading-relaxed">
+                  Home to the 17th-century Hanle Monastery and the Indian
+                  Astronomical Observatory. Hanle is the crown jewel of India's
+                  first Dark Sky Reserve, offering skies so dark they cast
+                  shadows by starlight.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 px-6">
+      <div class="container mx-auto">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center mb-12 reveal"
+        >
+          <h2 class="text-3xl font-light">Celestial Gallery</h2>
+
+          <!-- Filters -->
+          <div
+            class="flex space-x-4 mt-6 md:mt-0 text-sm overflow-x-auto pb-2 md:pb-0 w-full md:w-auto"
+          >
+            <button
+              onclick="filterGallery('all')"
+              class="gallery-filter text-skarma-gold border-b border-skarma-gold pb-1 px-2 whitespace-nowrap"
+            >
+              All
+            </button>
+            <button
+              onclick="filterGallery('milkyway')"
+              class="gallery-filter text-gray-500 hover:text-white pb-1 px-2 whitespace-nowrap transition-colors"
+            >
+              Milky Way
+            </button>
+            <button
+              onclick="filterGallery('landscape')"
+              class="gallery-filter text-gray-500 hover:text-white pb-1 px-2 whitespace-nowrap transition-colors"
+            >
+              Landscapes
+            </button>
+            <button
+              onclick="filterGallery('monastery')"
+              class="gallery-filter text-gray-500 hover:text-white pb-1 px-2 whitespace-nowrap transition-colors"
+            >
+              Monasteries
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-4 reveal"
+          id="gallery-grid"
+        >
+          <!-- Gallery Item 1 -->
+          <div
+            class="gallery-item milkyway group relative aspect-square overflow-hidden bg-gray-900 cursor-pointer"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&q=80&w=600"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              alt="Milky Way"
+            />
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-skarma-gold tracking-widest text-sm uppercase border border-skarma-gold px-4 py-2"
+                >View</span
+              >
+            </div>
+          </div>
+          <!-- Gallery Item 2 -->
+          <div
+            class="gallery-item monastery group relative aspect-square overflow-hidden bg-gray-900 cursor-pointer"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1549488497-6c8418b76dfb?auto=format&fit=crop&q=80&w=600"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              alt="Stakna"
+            />
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-skarma-gold tracking-widest text-sm uppercase border border-skarma-gold px-4 py-2"
+                >View</span
+              >
+            </div>
+          </div>
+          <!-- Gallery Item 3 -->
+          <div
+            class="gallery-item landscape group relative aspect-square overflow-hidden bg-gray-900 cursor-pointer"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1464802686167-b939a6910659?auto=format&fit=crop&q=80&w=600"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              alt="Landscape"
+            />
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-skarma-gold tracking-widest text-sm uppercase border border-skarma-gold px-4 py-2"
+                >View</span
+              >
+            </div>
+          </div>
+          <!-- Gallery Item 4 -->
+          <div
+            class="gallery-item milkyway group relative aspect-square overflow-hidden bg-gray-900 cursor-pointer"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1543169102-466d7bd49666?auto=format&fit=crop&q=80&w=600"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              alt="Starry Sky"
+            />
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-skarma-gold tracking-widest text-sm uppercase border border-skarma-gold px-4 py-2"
+                >View</span
+              >
+            </div>
+          </div>
+          <!-- Gallery Item 5 -->
+          <div
+            class="gallery-item landscape group relative aspect-square overflow-hidden bg-gray-900 cursor-pointer"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1518066000714-58c45f1a2c0a?auto=format&fit=crop&q=80&w=600"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              alt="Mountains"
+            />
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-skarma-gold tracking-widest text-sm uppercase border border-skarma-gold px-4 py-2"
+                >View</span
+              >
+            </div>
+          </div>
+          <!-- Gallery Item 6 -->
+          <div
+            class="gallery-item monastery group relative aspect-square overflow-hidden bg-gray-900 cursor-pointer"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1626014902195-2cb3a9df8615?auto=format&fit=crop&q=80&w=600"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              alt="Monastery 2"
+            />
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-skarma-gold tracking-widest text-sm uppercase border border-skarma-gold px-4 py-2"
+                >View</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Future Workshops / Tourism -->
+    <section
+      class="py-24 bg-skarma-gold/5 border-t border-b border-skarma-gold/10 text-center"
+    >
+      <div class="container mx-auto px-6 reveal">
+        <h2 class="text-3xl font-light mb-4 text-white">
+          Astro Tourism & Workshops
+        </h2>
+        <p class="text-gray-400 font-serif mb-8 max-w-2xl mx-auto">
+          Coming Soon: Guided star-gazing sessions, astrophotography workshops,
+          and cultural astronomy tours.
+        </p>
+
+        <div
+          class="inline-flex items-center space-x-2 text-skarma-gold border-b border-skarma-gold pb-1 cursor-pointer hover:text-white hover:border-white transition-all"
+        >
+          <span class="uppercase tracking-widest text-sm"
+            >Register Interest</span
+          >
+          <i class="ph ph-arrow-right"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <div
+          class="glass-panel p-8 md:p-12 rounded-sm border border-white/5 reveal"
+        >
+          <div class="text-center mb-10">
+            <h2 class="text-3xl font-light text-white mb-2">
+              Join the Celestial Journey
+            </h2>
+            <p class="text-gray-400 font-serif text-sm">
+              Subscribe for updates or contact us for inquiries.
+            </p>
+          </div>
+
+          <form onsubmit="handleContact(event)" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label
+                  class="block text-xs uppercase tracking-widest text-gray-500 mb-2"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  class="w-full bg-skarma-bg/50 border border-white/10 p-3 text-white focus:border-skarma-gold focus:outline-none transition-colors"
+                  placeholder="John Doe"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-xs uppercase tracking-widest text-gray-500 mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  class="w-full bg-skarma-bg/50 border border-white/10 p-3 text-white focus:border-skarma-gold focus:outline-none transition-colors"
+                  placeholder="john@example.com"
+                  required
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                class="block text-xs uppercase tracking-widest text-gray-500 mb-2"
+                >Message</label
+              >
+              <textarea
+                rows="4"
+                class="w-full bg-skarma-bg/50 border border-white/10 p-3 text-white focus:border-skarma-gold focus:outline-none transition-colors"
+                placeholder="Your inquiry..."
+              ></textarea>
+            </div>
+            <div class="text-center">
+              <button
+                type="submit"
+                class="px-8 py-3 bg-skarma-gold text-skarma-dark font-medium tracking-widest hover:bg-white transition-colors uppercase text-sm"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 text-center border-t border-white/10">
+      <div class="container mx-auto px-6">
+        <a
+          href="#"
+          class="text-2xl font-light tracking-[0.2em] text-white block mb-6"
+        >
+          SKARMA<span class="text-skarma-gold">.</span>
+        </a>
+        <div class="flex justify-center space-x-6 mb-8 text-gray-500">
+          <a href="#" class="hover:text-skarma-gold transition-colors"
+            ><i class="ph ph-instagram-logo text-xl"></i
+          ></a>
+          <a href="#" class="hover:text-skarma-gold transition-colors"
+            ><i class="ph ph-twitter-logo text-xl"></i
+          ></a>
+          <a href="#" class="hover:text-skarma-gold transition-colors"
+            ><i class="ph ph-facebook-logo text-xl"></i
+          ></a>
+        </div>
+        <p class="text-xs text-gray-600 uppercase tracking-widest">
+          &copy; 2024 SKARMA Ladakh. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- script -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
