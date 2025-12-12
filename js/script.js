@@ -33,7 +33,7 @@ const scienceData = {
   observatory: {
     title: "IAO",
     subtitle: "Indian Astronomical Observatory",
-    img: "https://images.unsplash.com/photo-1582234057999-923f06e05391?auto=format&fit=crop&q=80&w=1000",
+    img: "./assets/images/iao.jpg",
   },
   bortle: {
     title: "Class 1",
