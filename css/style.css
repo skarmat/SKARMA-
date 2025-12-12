@@ -1106,8 +1106,8 @@ video {
   background-color: rgb(212 175 55 / 0.05);
 }
 
-.bg-\[url\(\'\.\/assets\/images\/iao\.jpg\'\)\] {
-  background-image: url('./assets/images/iao.jpg');
+.bg-\[url\(\'https\:\/\/images\.unsplash\.com\/photo-1462331940025-496dfbfc7564\?q\=80\&w\=1000\&auto\=format\&fit\=crop\'\)\] {
+  background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1000&auto=format&fit=crop');
 }
 
 .bg-gradient-to-b {
@@ -1116,10 +1116,6 @@ video {
 
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\'https\:\/\/images\.unsplash\.com\/photo-1462331940025-496dfbfc7564\?q\=80\&w\=1000\&auto\=format\&fit\=crop\'\)\] {
-  background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1000&auto=format&fit=crop');
 }
 
 .from-skarma-bg\/30 {
