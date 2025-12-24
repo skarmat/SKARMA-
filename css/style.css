@@ -52,6 +52,22 @@
   --tw-contain-style:  ;
 }
 
+/* Mobile menu: make overlay scrollable and lock body when menu is open */
+#mobile-menu {
+  max-height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* When menu is open, fix body to prevent background scroll. top is set inline from JS. */
+body.menu-open {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+
 ::backdrop {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;

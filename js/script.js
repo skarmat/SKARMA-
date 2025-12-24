@@ -178,12 +178,22 @@ const menu = document.getElementById("mobile-menu");
 const closeBtn = document.getElementById("close-menu-btn");
 const menuLinks = menu.querySelectorAll("a");
 
+let _menuScrollPos = 0;
+
 btn.addEventListener("click", () => {
+  // lock background scroll by fixing body at current scroll position
+  _menuScrollPos = window.scrollY || window.pageYOffset || 0;
+  document.body.style.top = `-${_menuScrollPos}px`;
+  document.body.classList.add("menu-open");
   menu.classList.remove("translate-x-full");
 });
 
 const closeMenu = () => {
   menu.classList.add("translate-x-full");
+  // restore body scroll position
+  document.body.classList.remove("menu-open");
+  document.body.style.top = "";
+  window.scrollTo(0, _menuScrollPos);
 };
 
 closeBtn.addEventListener("click", closeMenu);
