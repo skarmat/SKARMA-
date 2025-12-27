@@ -5,20 +5,22 @@ module.exports = {
     extend: {
       colors: {
         skarma: {
-          bg: "#05070a" /* Deepest Black/Blue */,
-          dark: "#0B0D17" /* Midnight */,
+          bg: "#000000ff" /* Deepest Black/Blue */,
+          dark: "#000000ff" /* Midnight */,
           card: "#11131F" /* Slightly lighter for cards */,
-          gold: "#D4AF37" /* Muted Gold */,
+          gold: "#07d06cff" /* Muted Gold */,
           silver: "#E2E8F0" /* Starlight White */,
           accent: "#C27856" /* Earthy Terracotta */,
         },
       },
-      fontFamily: {
+      fontFamily: { 
         sans: ["Montserrat", "sans-serif"],
         serif: ["Merriweather", "serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "starlore": "url('/assets/images/starlore-bg.jpg')",
+        "hero": "url('/assets/images/hero_gif.gif')",
       },
       animation: {
         "slow-zoom": "zoom 20s infinite alternate",

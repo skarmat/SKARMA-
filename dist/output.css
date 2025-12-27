@@ -612,6 +612,10 @@ video {
   bottom: 2.5rem;
 }
 
+.left-0 {
+  left: 0px;
+}
+
 .left-1\/2 {
   left: 50%;
 }
@@ -630,6 +634,10 @@ video {
 
 .top-6 {
   top: 1.5rem;
+}
+
+.z-0 {
+  z-index: 0;
 }
 
 .z-10 {
@@ -767,6 +775,10 @@ video {
 
 .w-64 {
   width: 16rem;
+}
+
+.w-\[100vw\] {
+  width: 100vw;
 }
 
 .w-\[120\%\] {
@@ -1007,23 +1019,24 @@ video {
 }
 
 .border-skarma-gold {
-  border-color: #07d06cff;
+  --tw-border-opacity: 1;
+  border-color: rgb(212 175 55 / var(--tw-border-opacity, 1));
 }
 
 .border-skarma-gold\/10 {
-  border-color: rgb(7 208 108 / 0.1);
+  border-color: rgb(212 175 55 / 0.1);
 }
 
 .border-skarma-gold\/20 {
-  border-color: rgb(7 208 108 / 0.2);
+  border-color: rgb(212 175 55 / 0.2);
 }
 
 .border-skarma-gold\/30 {
-  border-color: rgb(7 208 108 / 0.3);
+  border-color: rgb(212 175 55 / 0.3);
 }
 
 .border-skarma-gold\/50 {
-  border-color: rgb(7 208 108 / 0.5);
+  border-color: rgb(212 175 55 / 0.5);
 }
 
 .border-transparent {
@@ -1057,12 +1070,8 @@ video {
   background-color: rgb(22 163 74 / var(--tw-bg-opacity, 1));
 }
 
-.bg-skarma-bg {
-  background-color: #000000ff;
-}
-
 .bg-skarma-bg\/50 {
-  background-color: rgb(0 0 0 / 0.5);
+  background-color: rgb(5 7 10 / 0.5);
 }
 
 .bg-skarma-card {
@@ -1071,54 +1080,71 @@ video {
 }
 
 .bg-skarma-dark {
-  background-color: #000000ff;
+  --tw-bg-opacity: 1;
+  background-color: rgb(11 13 23 / var(--tw-bg-opacity, 1));
 }
 
 .bg-skarma-dark\/90 {
-  background-color: rgb(0 0 0 / 0.9);
+  background-color: rgb(11 13 23 / 0.9);
 }
 
 .bg-skarma-dark\/95 {
-  background-color: rgb(0 0 0 / 0.95);
+  background-color: rgb(11 13 23 / 0.95);
 }
 
 .bg-skarma-gold {
-  background-color: #07d06cff;
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 175 55 / var(--tw-bg-opacity, 1));
 }
 
 .bg-skarma-gold\/20 {
-  background-color: rgb(7 208 108 / 0.2);
+  background-color: rgb(212 175 55 / 0.2);
 }
 
 .bg-skarma-gold\/5 {
-  background-color: rgb(7 208 108 / 0.05);
+  background-color: rgb(212 175 55 / 0.05);
 }
 
 .bg-\[url\(\'https\:\/\/images\.unsplash\.com\/photo-1462331940025-496dfbfc7564\?q\=80\&w\=1000\&auto\=format\&fit\=crop\'\)\] {
   background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1000&auto=format&fit=crop');
 }
 
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
-.bg-hero {
-  background-image: url('/assets/images/hero_gif.gif');
+.bg-starlore {
+  background-image: url('./assets/images/starlore-bg.jpg');
 }
 
-.bg-starlore {
-  background-image: url('/assets/images/starlore-bg.jpg');
+.from-skarma-bg\/0 {
+  --tw-gradient-from: rgb(5 7 10 / 0) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(5 7 10 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .from-skarma-dark {
-  --tw-gradient-from: #000000ff var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-from: #0B0D17 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(11 13 23 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .via-skarma-dark\/50 {
+  --tw-gradient-to: rgb(11 13 23 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(11 13 23 / 0.5) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.via-transparent {
   --tw-gradient-to: rgb(0 0 0 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), rgb(0 0 0 / 0.5) var(--tw-gradient-via-position), var(--tw-gradient-to);
+  --tw-gradient-stops: var(--tw-gradient-from), transparent var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.to-skarma-bg {
+  --tw-gradient-to: #05070a var(--tw-gradient-to-position);
 }
 
 .to-transparent {
@@ -1348,15 +1374,17 @@ video {
 }
 
 .text-skarma-dark {
-  color: #000000ff;
+  --tw-text-opacity: 1;
+  color: rgb(11 13 23 / var(--tw-text-opacity, 1));
 }
 
 .text-skarma-gold {
-  color: #07d06cff;
+  --tw-text-opacity: 1;
+  color: rgb(212 175 55 / var(--tw-text-opacity, 1));
 }
 
 .text-skarma-gold\/50 {
-  color: rgb(7 208 108 / 0.5);
+  color: rgb(212 175 55 / 0.5);
 }
 
 .text-skarma-silver {
@@ -1550,35 +1578,43 @@ video {
 }
 
 .selection\:bg-skarma-gold *::-moz-selection {
-  background-color: #07d06cff;
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 175 55 / var(--tw-bg-opacity, 1));
 }
 
 .selection\:bg-skarma-gold *::selection {
-  background-color: #07d06cff;
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 175 55 / var(--tw-bg-opacity, 1));
 }
 
 .selection\:text-skarma-dark *::-moz-selection {
-  color: #000000ff;
+  --tw-text-opacity: 1;
+  color: rgb(11 13 23 / var(--tw-text-opacity, 1));
 }
 
 .selection\:text-skarma-dark *::selection {
-  color: #000000ff;
+  --tw-text-opacity: 1;
+  color: rgb(11 13 23 / var(--tw-text-opacity, 1));
 }
 
 .selection\:bg-skarma-gold::-moz-selection {
-  background-color: #07d06cff;
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 175 55 / var(--tw-bg-opacity, 1));
 }
 
 .selection\:bg-skarma-gold::selection {
-  background-color: #07d06cff;
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 175 55 / var(--tw-bg-opacity, 1));
 }
 
 .selection\:text-skarma-dark::-moz-selection {
-  color: #000000ff;
+  --tw-text-opacity: 1;
+  color: rgb(11 13 23 / var(--tw-text-opacity, 1));
 }
 
 .selection\:text-skarma-dark::selection {
-  color: #000000ff;
+  --tw-text-opacity: 1;
+  color: rgb(11 13 23 / var(--tw-text-opacity, 1));
 }
 
 .hover\:-translate-y-2:hover {
@@ -1592,7 +1628,8 @@ video {
 }
 
 .hover\:bg-skarma-gold:hover {
-  background-color: #07d06cff;
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 175 55 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-white:hover {
@@ -1605,11 +1642,13 @@ video {
 }
 
 .hover\:text-skarma-dark:hover {
-  color: #000000ff;
+  --tw-text-opacity: 1;
+  color: rgb(11 13 23 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-skarma-gold:hover {
-  color: #07d06cff;
+  --tw-text-opacity: 1;
+  color: rgb(212 175 55 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-white:hover {
@@ -1623,7 +1662,8 @@ video {
 }
 
 .focus\:border-skarma-gold:focus {
-  border-color: #07d06cff;
+  --tw-border-opacity: 1;
+  border-color: rgb(212 175 55 / var(--tw-border-opacity, 1));
 }
 
 .focus\:outline-none:focus {
@@ -1643,7 +1683,8 @@ video {
 }
 
 .group:hover .group-hover\:text-skarma-gold {
-  color: #07d06cff;
+  --tw-text-opacity: 1;
+  color: rgb(212 175 55 / var(--tw-text-opacity, 1));
 }
 
 .group:hover .group-hover\:opacity-100 {

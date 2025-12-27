@@ -24,14 +24,14 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body
-    class="bg-skarma-bg text-skarma-silver font-sans antialiased selection:bg-skarma-gold selection:text-skarma-dark overflow-x-hidden"
+    class=" text-skarma-silver font-sans antialiased selection:bg-skarma-gold selection:text-skarma-dark overflow-x-hidden"
   >
     <!-- Ambient Background -->
     <div class="stars"></div>
     <div class="stars2"></div>
 
     <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+    <nav id="navbar" class=" fixed w-full z-50 transition-all duration-300 py-4">
       <div class="container mx-auto px-6 flex justify-between items-center">
         <a
           href="#"
@@ -126,23 +126,9 @@
 
     <!-- Hero Section -->
     <header
-      class="relative min-h-screen w-full flex items-center justify-center overflow-hidden"
+      class="bg-hero bg-cover bg-center min-h-screen w-full flex items-center justify-center overflow-hidden"
     >
-      <!-- Background Video -->
-      <div class="absolute inset-0 z-0 w-full h-full">
-        <video
-          src="./assets/images/hero_bg.mp4"
-          autoplay
-          muted
-          loop
-          playsinline
-          class="absolute top-0 left-0 w-[100vw] h-full object-cover opacity-80 "
-        ></video>
-
-        <div
-          class="absolute inset-0 bg-gradient-to-b from-skarma-bg/30 via-transparent to-skarma-bg"
-        ></div>
-      </div>
+      
 
       <!-- Content -->
       <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
@@ -177,7 +163,7 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="py-24 px-6 relative">
+    <section id="about" class="py-24 px-6 relative bg-skarma-bg">
       <div class="container mx-auto max-w-3xl text-center reveal">
         <div class="mb-6 flex justify-center">
           <i class="ph ph-star-four text-skarma-gold text-2xl"></i>
@@ -195,7 +181,7 @@
     </section>
 
     <!-- Ladakhi Starlore (Stories) -->
-    <section id="stories" class="py-24 bg-skarma-dark relative overflow-hidden">
+    <section id="stories" class="py-24 bg-starlore bg-fixed bg-cover bg-center min-h-[60vh] relative overflow-hidden">
       <!-- Decor -->
       <div
         class="absolute top-0 right-0 w-64 h-64 bg-skarma-gold/5 rounded-full blur-3xl"
@@ -328,7 +314,7 @@
     </section>
 
     <!-- Science Section -->
-    <section id="science" class="py-24 relative">
+    <section id="science" class="py-24 relative bg-skarma-bg">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16 reveal">
           <span class="text-skarma-gold text-sm tracking-widest uppercase"
