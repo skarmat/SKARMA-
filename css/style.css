@@ -1103,7 +1103,7 @@ video {
 }
 
 .bg-hero {
-  background-image: url('./assets/images/hero_gif.gif');
+  background-image: url('/assets/images/hero_gif.gif');
 }
 
 .bg-starlore {
