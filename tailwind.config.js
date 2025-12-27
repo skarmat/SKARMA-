@@ -19,8 +19,8 @@ module.exports = {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "starlore": "url('/assets/images/starlore-bg.jpg')",
-        "hero": "url('/assets/images/hero_gif.gif')",
+        "starlore": "url('./assets/images/starlore-bg.jpg')",
+        "hero": "url('./assets/images/hero_gif.gif')",
       },
       animation: {
         "slow-zoom": "zoom 20s infinite alternate",
